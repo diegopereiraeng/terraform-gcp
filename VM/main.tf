@@ -16,7 +16,7 @@ resource "random_id" "instance_id" {
 resource "google_compute_instance" "default" {
  name         = "diego-koala-vm-${random_id.instance_id.hex}"
  machine_type = var.instance_type // "f1-micro"
- zone         = var.region // "us-central1-a"
+ zone         = var.zone // "us-central1-a"
  metadata = {
    ssh-keys = "INSERT_USERNAME:${var.ssh_keys}"  // "~/.ssh/id_rsa.pub")}"
  }

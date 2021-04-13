@@ -8,6 +8,10 @@ variable "region" {
   description = "Resource Region"
   type        = string
 }
+variable "zone" {
+  description = "Resource Region"
+  type        = string
+}
 
 variable "gcp_sa" {
   description = "The Google Service Account to be used to create the resources"
