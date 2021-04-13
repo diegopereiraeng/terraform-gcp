@@ -9,7 +9,7 @@ variable "region" {
   type        = string
 }
 variable "zone" {
-  description = "Resource Region"
+  description = "Resource Zone"
   type        = string
 }
 
