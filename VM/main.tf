@@ -2,7 +2,7 @@
 
 // Configure the Google Cloud provider
 provider "google" {
- credentials = file(var.gcp_sa) //
+ credentials = var.gcp_sa //
  project     = var.project //
  region      = var.region //"us-central1-a"
 }
@@ -18,7 +18,7 @@ resource "google_compute_instance" "default" {
  machine_type = var.instance_type // "f1-micro"
  zone         = var.region // "us-central1-a"
  metadata = {
-   ssh-keys = "INSERT_USERNAME:${file(var.ssh_keys)}"  // "~/.ssh/id_rsa.pub")}"
+   ssh-keys = "INSERT_USERNAME:${var.ssh_keys}"  // "~/.ssh/id_rsa.pub")}"
  }
  
  
