@@ -41,7 +41,7 @@ resource "google_compute_instance" "default" {
 }
 
 
-resource "google_compute_firewall" "default" {
+/* resource "google_compute_firewall" "default" {
  name    = "diego-app-firewall"
  network = "default"
 
@@ -49,4 +49,4 @@ resource "google_compute_firewall" "default" {
    protocol = "tcp"
    ports    = ["3000"]
  }
-}
+} */
