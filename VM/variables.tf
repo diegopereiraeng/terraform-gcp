@@ -11,7 +11,7 @@ variable "region" {
 variable "zone" {
   description = "Resource Zone"
   type        = string
-  default     = "us-central1-a"
+  default     = "us-west1-a"
 }
 
 variable "gcp_sa" {
