@@ -29,7 +29,7 @@ resource "google_compute_instance" "default" {
  }
 
 // Make sure nodejs is installed on all new instances for later steps
- metadata_startup_script = "sudo apt-get update; sudo apt-get install -y nodejs"
+ metadata_startup_script = "sudo apt-get update; sudo apt-get install -y nodejs;npm install express;npm install serve-favicon;npm install morgan;npm install fs;npm install body-parser;npm install method-override;npm install errorhandler"
 
  network_interface {
    network = "default"
