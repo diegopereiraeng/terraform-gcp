@@ -18,7 +18,7 @@ resource "google_compute_instance" "default" {
  machine_type = var.instance_type // "f1-micro"
  zone         = var.zone // "us-central1-a"
  metadata = {
-   ssh-keys = "INSERT_USERNAME:${var.ssh_keys}"  // "~/.ssh/id_rsa.pub")}"
+   ssh-keys = "diego.pereira:${var.ssh_keys}"  // "~/.ssh/id_rsa.pub")}"
  }
  
  
