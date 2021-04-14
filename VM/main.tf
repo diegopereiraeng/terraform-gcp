@@ -29,7 +29,7 @@ resource "google_compute_instance" "default" {
  }
 
 // Make sure nodejs is installed on all new instances for later steps
- metadata_startup_script = "sudo apt-get update;sudo apt-get install gnupg;sudo apt-get install -y git;curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -;sudo apt-get install -y nodejs;sudo npm install express;sudo npm install serve-favicon;sudo npm install morgan;sudo npm install fs;sudo npm install body-parser;sudo npm install method-override;sudo npm install errorhandler;sudo wget -qO - https://www.mongodb.org/static/pgp/server-3.6.asc | sudo apt-key add -;echo "deb http://repo.mongodb.org/apt/debian stretch/mongodb-org/3.6 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.6.list;sudo apt-get install -y mongodb-org"
+ metadata_startup_script = "sudo apt-get update;sudo apt-get install gnupg;sudo apt-get install -y git;curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -;sudo apt-get install -y nodejs;sudo npm install express;sudo npm install serve-favicon;sudo npm install morgan;sudo npm install fs;sudo npm install body-parser;sudo npm install method-override;sudo npm install errorhandler;sudo wget -qO - https://www.mongodb.org/static/pgp/server-3.6.asc | sudo apt-key add -;echo 'deb http://repo.mongodb.org/apt/debian stretch/mongodb-org/3.6 main' | sudo tee /etc/apt/sources.list.d/mongodb-org-3.6.list;sudo apt-get install -y mongodb-org"
 
  network_interface {
    network = "default"
