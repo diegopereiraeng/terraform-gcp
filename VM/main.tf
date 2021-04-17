@@ -43,7 +43,7 @@ resource "google_compute_instance" "default" {
 
 
 resource "google_compute_firewall" "default" {
- name    = "diego-app-firewall"
+ name    = "diego-app-firewall-${random_id.instance_id.hex}"
  network = "default"
 
  allow {
